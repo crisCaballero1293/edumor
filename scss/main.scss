@@ -1,0 +1,275 @@
+/* ---------------------------------- VARS ---------------------------------- */
+$mainFont: "Assistant", sans-serif;
+$secondFont: "Noto Sans Display", sans-serif;
+// 'Assistant', sans-serif;
+// 'Gulzar', serif;
+// 'Mallanna', sans-serif;
+// 'Noto Sans', sans-serif;
+// 'Noto Sans Display', sans-serif;
+$blueBlack: #23374d;
+$blue: #1089ff;
+$gray: #e5e5e5;
+$lGray: #eeeeee;
+$wh: #fff;
+// #23374D - blue black
+// #1089FF - blue
+// #E5E5E5 - gray
+// #EEEEEE - light gray
+/* -------------------------------------------------------------------------- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+//HEADER GRADIENTS
+.header {
+  width: 100%;
+  height: 800px;
+  background: -webkit-linear-gradient(to left, rgba(16, 136, 255, 0.7), rgba(229, 229, 229, 0.7)), url(../img/banner.jpg); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, rgba(16, 136, 255, 0.7), rgba(229, 229, 229, 0.7)), url(../img/banner.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+/* -------------------------------------------------------------------------- */
+/* ------------------------------ STYLES HEADER ----------------------------- */
+.header {
+  .flex {
+    width: 90%;
+    margin: auto;
+    padding: 28px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .logo-nav-container {
+    a {
+      text-decoration: none;
+      color: $blueBlack;
+      font-family: $mainFont;
+    }
+    .logo-container {
+      a {
+        font-size: 35px;
+        font-weight: 800;
+        letter-spacing: -0.5mm;
+      }
+    }
+    .main-nav {
+      .menu {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        background-color: $blueBlack;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        text-align: center;
+        transition: height 0.3s linear;
+        z-index: 1;
+      }
+      .show-menu {
+        height: 340px;
+      }
+      .menu-item {
+        list-style: none;
+      }
+      .menu-link {
+        color: $gray;
+        display: block;
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: -0.2mm;
+        padding: 30px;
+        transition: 0.4s;
+      }
+      .menu-link:hover {
+        color: $blue;
+      }
+    }
+  }
+  #btn-menu {
+    button {
+      font-size: 35px;
+      margin-top: 8px;
+      color: $blueBlack;
+      cursor: pointer;
+      background: none;
+      border: none;
+      transition: 0.3s;
+    }
+    button:hover {
+      color: $lGray;
+    }
+  }
+  .banner {
+    width: 100%;
+    text-align: center;
+    color: $lGray;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    .banner-main-txt {
+      margin-bottom: 12px;
+      font-size: 33px;
+      font-weight: 800;
+      font-family: $mainFont;
+    }
+    .banner-txt {
+      font-size: 20px;
+      font-weight: 300;
+      font-family: $mainFont;
+    }
+  }
+  .wave {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+}
+/* ------------------------------- STYLES MAIN ------------------------------ */
+.main {
+  .container {
+    display: block;
+    width: 90%;
+    margin: auto;
+    .title {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      text-align: center;
+      font-family: $mainFont;
+      font-size: 33px;
+      letter-spacing: -0.2mm;
+      color: $blueBlack;
+    }
+    .subtitle {
+      color: $blueBlack;
+      font-size: 23px;
+      font-family: $mainFont;
+    }
+  }
+  /* ----------------------------------- TOP ---------------------------------- */
+  .main-top {
+    .title {
+      margin-bottom: 60px;
+    }
+    .subtitle {
+      margin-bottom: 15px;
+    }
+  }
+  .top-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .top-content-img {
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+    }
+    .top-content-txt {
+      margin-top: 30px;
+      color: $blueBlack;
+      .circle {
+        display: inline-block;
+        background-color: $blue;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        color: $wh;
+        text-align: center;
+        font-family: $mainFont;
+        font-weight: 600;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+        margin-right: 5px;
+      }
+      .txt {
+        font-family: $mainFont;
+        font-size: 18px;
+        font-weight: 300;
+        text-align: justify;
+        display: inline-block;
+        padding: 0 0 30px 17px;
+      }
+    }
+  }
+  /* -------------------------------------------------------------------------- */
+  /* ----------------------------------- MID ---------------------------------- */
+  .cursos {
+    margin-top: 100px;
+  }
+  /* -------------------------------------------------------------------------- */
+  /* --------------------------------- BOTTOM --------------------------------- */
+  /* -------------------------------------------------------------------------- */
+}
+@media only screen and (min-width: "768px") {
+  .header {
+    .banner {
+      .banner-main-txt {
+        font-size: 48px;
+      }
+      .banner-txt {
+        font-size: 30px;
+      }
+    }
+  }
+  .main-nav {
+    #menu {
+      position: relative;
+      height: auto;
+      background: none;
+      top: 0;
+      .menu-item {
+        display: inline-block;
+      }
+      .menu-link {
+        padding: 0;
+        margin-left: 25px;
+        color: $blueBlack;
+        transition: 0.3s;
+      }
+      .menu-link:hover {
+        color: $lGray;
+      }
+    }
+    #btn-menu {
+      display: none;
+    }
+  }
+}
+@media only screen and (min-width: "1024px") {
+  .header {
+    .banner {
+      .banner-main-txt {
+        font-size: 68px;
+      }
+      .banner-txt {
+        font-size: 35px;
+      }
+    }
+  }
+  .main {
+    .top-content {
+      max-width: 1350px;
+      flex-direction: row;
+      align-items: center;
+      .top-content-img {
+        width: 45%;
+        position: relative;
+        right: 20px;
+      }
+      .top-content-txt {
+        width: 50%;
+        position: relative;
+        right: 20px;
+        .txt {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
